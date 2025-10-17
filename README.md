@@ -33,15 +33,20 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            border: 4px solid rgba(255,255,255,0.3);
-            object-fit: cover;
-        }
-<img src="Perfil.jpg" alt="Mi foto" class="profile-photo">
+<style>
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        border: 4px solid rgba(255,255,255,0.3);
+        object-fit: cover;
+        display: block;
+    }
+</style>
+
+<img src="Perfil.jpg" alt="Mi foto" class="profile-img">
+
 
         .name {
             text-align: center;

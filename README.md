@@ -41,6 +41,7 @@
             border: 4px solid rgba(255,255,255,0.3);
             object-fit: cover;
         }
+<img src="perfil.jpg" alt="Mi foto" class="profile-photo">
 
         .name {
             text-align: center;

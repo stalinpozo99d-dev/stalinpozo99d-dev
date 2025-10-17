@@ -356,15 +356,10 @@
             <div class="bio-section">
                 <h2>BIOGRAFÍA</h2>
                 <div class="bio-text">
-                    <p>Erik Stalin Pozo Duarte es Ingeniero en Logística y Transporte egresado de la Universidad Politécnica Estatal del Carchi (UPEC), con especialización en comercio exterior y una visión integral de la cadena de suministro moderna. Su formación académica y experiencia profesional lo han convertido en un profesional capaz de diseñar, gestionar y optimizar cada etapa de los procesos logísticos: desde el aprovisionamiento y almacenamiento hasta la distribución y el transporte terrestre y multimodal.</p>
+                    <p>Erik Stalin Pozo Duarte es Ingeniero en Logística y Transporte con visión estratégica de la cadena de suministro y especialización en comercio exterior. Su experiencia combina el diseño y optimización de procesos logísticos con la implementación de metodologías modernas como Lean Management, BPMN y Teoría de Restricciones, orientadas a reducir costos y maximizar la eficiencia operativa.</p>
                     
-                    <p>A lo largo de su trayectoria, ha demostrado una sólida capacidad para implementar estrategias innovadoras orientadas a mejorar la eficiencia operativa, reducir costos y elevar la competitividad empresarial. Su enfoque combina conocimientos técnicos con herramientas modernas como BPMN para el modelado de procesos, metodologías de mejora continua como Lean Management y marcos analíticos estratégicos como la Teoría de Restricciones y el análisis competitivo de Porter.</p>
-                    
-                    <p>Erik ha desarrollado habilidades clave en la coordinación entre proveedores y clientes, el control de calidad logística, la gestión documental y la evaluación de riesgos, contribuyendo directamente al crecimiento y sostenibilidad de las organizaciones en las que ha trabajado. Su experiencia abarca sectores tanto públicos como privados, desempeñando funciones en atención al cliente, operaciones comerciales, planificación logística y optimización de centros de distribución.</p>
-                    
-                    <p>Además, cuenta con formación complementaria en Vigilancia y Seguridad Privada, lo que refuerza su perfil con competencias en seguridad operativa, control de accesos y manejo de situaciones de riesgo, un valor diferencial que aporta robustez a la gestión logística en entornos exigentes.</p>
-                    
-                    <p>Impulsado por la innovación, la mejora continua y la visión estratégica, Erik Pozo se proyecta como un profesional que transforma los desafíos logísticos en ventajas competitivas sostenibles, aportando soluciones integrales y de alto impacto en organizaciones que buscan destacar en un mercado globalizado.</p>
+                    <p>Apasionado por la innovación y la mejora continua, ha trabajado en sectores público y privado liderando proyectos de abastecimiento, distribución y transporte. Además, cuenta con formación complementaria en Vigilancia y Seguridad Privada, lo que refuerza su perfil con competencias en seguridad operativa, control de accesos y manejo de situaciones de riesgo, un valor diferencial que aporta robustez permitiendo ofrecer soluciones integrales que convierten la logística en una ventaja competitiva sostenible.</p>                 
+                 
                 </div>
                 
                 <div class="quote">

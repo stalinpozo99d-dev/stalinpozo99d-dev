@@ -33,13 +33,17 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
-<img src="Perfil.jpg" alt="Mi foto" class="profile-photo">
-.profile-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
+<div class="avatar"></div>
+.avatar{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  background-image:url('./Perfil.jpg'); 
+  background-size:cover;
+  background-position:center;
+  background-color:#ddd;
 }
+
 
 
         .name {

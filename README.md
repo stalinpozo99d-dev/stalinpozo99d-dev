@@ -1,16 +1,715 @@
-## Hi there 👋
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erik Stalin Pozo Duarte - Hoja de Vida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!--
-**stalinpozo99d-dev/stalinpozo99d-dev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
 
-Here are some ideas to get you started:
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+        /* Sidebar Styles */
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(135deg, #008080, #006666);
+            color: white;
+            padding: 30px 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid rgba(255,255,255,0.3);
+            object-fit: cover;
+        }
+
+        .name {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: white;
+            line-height: 1.3;
+        }
+
+        .section-title {
+            background-color: rgba(0,0,0,0.2);
+            padding: 12px 15px;
+            margin: 25px 0 15px 0;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info, .links {
+            padding: 0 10px;
+        }
+
+        .contact-item, .link-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 8px 0;
+        }
+
+        .contact-item i, .link-item i {
+            width: 25px;
+            margin-right: 12px;
+            font-size: 16px;
+        }
+
+        .contact-item a, .link-item a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item a:hover, .link-item a:hover {
+            color: #e0f7fa;
+            text-decoration: underline;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            background-color: white;
+        }
+
+        .bio-section {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .bio-section h2 {
+            color: #008080;
+            margin-bottom: 20px;
+            font-size: 24px;
+            border-bottom: 2px solid #008080;
+            padding-bottom: 10px;
+        }
+
+        .bio-text {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #555;
+            border-left: 3px solid #008080;
+            padding-left: 15px;
+            margin: 20px 0;
+        }
+
+        .interests-list {
+            padding-left: 20px;
+        }
+
+        .interests-list li {
+            margin-bottom: 8px;
+        }
+
+        .portfolio-section {
+            margin-top: 30px;
+        }
+
+        .portfolio-section h2 {
+            color: #008080;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .tab {
+            padding: 12px 20px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            border-radius: 5px 5px 0 0;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tab.active {
+            background-color: #008080;
+            color: white;
+        }
+
+        .years-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .year-btn {
+            padding: 8px 15px;
+            background-color: #e9ecef;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .year-btn.active {
+            background-color: #008080;
+            color: white;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-card h4 {
+            color: #008080;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .project-year {
+            background-color: #008080;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .project-location {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .project-description {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .certificate-item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #008080;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        .certificate-item a {
+            color: #008080;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .certificate-item a:hover {
+            text-decoration: underline;
+        }
+
+        .certificate-year {
+            background-color: #008080;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                border-radius: 5px;
+                margin-bottom: 5px;
+            }
+
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar {
+                padding: 15px;
+            }
+
+            .main-content {
+                padding: 15px;
+            }
+
+            .bio-section, .project-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="https://drive.google.com/file/d/1HAn5rmohcbLfDpVCVrY2goAUgr3E1y37/view?usp=sharing" alt="Foto de Perfil" class="profile-img" onerror="this.src='https://placehold.co/150x150?text=Erik+Pozo'">
+            <div class="name">Erik Stalin Pozo Duarte</div>
+
+            <div class="section-title">DATOS DE CONTACTO</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:stalinpozo99d@gmail.com">stalinpozo99d@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>(+593) 0983615196</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Tulcán - Carchi</span>
+                </div>
+            </div>
+
+            <div class="section-title">LINKS EXTERNOS</div>
+            <div class="links">
+                <div class="link-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="https://drive.google.com/file/d/1wbXxKq59Lw2VNWattJSGuekX9390JBvE/view?usp=sharing" target="_blank">Hoja de Vida PDF</a>
+                </div>
+                <div class="link-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/erik-pozo-76183627b" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Biography Section -->
+            <div class="bio-section">
+                <h2>BIOGRAFÍA</h2>
+                <div class="bio-text">
+                    <p>Erik Stalin Pozo Duarte es Ingeniero en Logística y Transporte egresado de la Universidad Politécnica Estatal del Carchi (UPEC), con especialización en comercio exterior y una visión integral de la cadena de suministro moderna. Su formación académica y experiencia profesional lo han convertido en un profesional capaz de diseñar, gestionar y optimizar cada etapa de los procesos logísticos: desde el aprovisionamiento y almacenamiento hasta la distribución y el transporte terrestre y multimodal.</p>
+                    
+                    <p>A lo largo de su trayectoria, ha demostrado una sólida capacidad para implementar estrategias innovadoras orientadas a mejorar la eficiencia operativa, reducir costos y elevar la competitividad empresarial. Su enfoque combina conocimientos técnicos con herramientas modernas como BPMN para el modelado de procesos, metodologías de mejora continua como Lean Management y marcos analíticos estratégicos como la Teoría de Restricciones y el análisis competitivo de Porter.</p>
+                    
+                    <p>Erik ha desarrollado habilidades clave en la coordinación entre proveedores y clientes, el control de calidad logística, la gestión documental y la evaluación de riesgos, contribuyendo directamente al crecimiento y sostenibilidad de las organizaciones en las que ha trabajado. Su experiencia abarca sectores tanto públicos como privados, desempeñando funciones en atención al cliente, operaciones comerciales, planificación logística y optimización de centros de distribución.</p>
+                    
+                    <p>Además, cuenta con formación complementaria en Vigilancia y Seguridad Privada, lo que refuerza su perfil con competencias en seguridad operativa, control de accesos y manejo de situaciones de riesgo, un valor diferencial que aporta robustez a la gestión logística en entornos exigentes.</p>
+                    
+                    <p>Impulsado por la innovación, la mejora continua y la visión estratégica, Erik Pozo se proyecta como un profesional que transforma los desafíos logísticos en ventajas competitivas sostenibles, aportando soluciones integrales y de alto impacto en organizaciones que buscan destacar en un mercado globalizado.</p>
+                </div>
+                
+                <div class="quote">
+                    "Mi objetivo es transformar la logística en el motor que impulse el crecimiento empresarial, combinando eficiencia, innovación y seguridad en cada proceso."
+                </div>
+                
+                <h3>Intereses Profesionales:</h3>
+                <ol class="interests-list">
+                    <li>Innovación logística y transformación digital</li>
+                    <li>Comercio exterior y globalización</li>
+                    <li>Optimización de la cadena de suministro</li>
+                    <li>Mejora continua y eficiencia operativa</li>
+                    <li>Desarrollo profesional y liderazgo</li>
+                    <li>Trabajo en equipo y comunicación efectiva</li>
+                    <li>Aprendizaje constante y formación continua</li>
+                    <li>Sostenibilidad y responsabilidad empresarial</li>
+                    <li>Coordinación y gestión de proyectos</li>
+                    <li>Emprendimiento y estrategias empresariales</li>
+                </ol>
+            </div>
+
+            <!-- Portfolio Section -->
+            <div class="portfolio-section">
+                <h2>PORTAFOLIO DE PROYECTOS</h2>
+                
+                <div class="tabs">
+                    <div class="tab active" data-tab="consultoria">PROYECTOS CONSULTORÍA</div>
+                    <div class="tab" data-tab="investigacion">PROYECTOS INVESTIGACIÓN</div>
+                    <div class="tab" data-tab="cursos">CURSOS</div>
+                    <div class="tab" data-tab="colaboraciones">COLABORACIONES</div>
+                    <div class="tab" data-tab="certificados">CERTIFICADOS</div>
+                </div>
+
+                <div class="years-container">
+                    <button class="year-btn active" data-year="all">Todos</button>
+                    <button class="year-btn" data-year="2025">2025</button>
+                    <button class="year-btn" data-year="2024">2024</button>
+                    <button class="year-btn" data-year="2023">2023</button>
+                    <button class="year-btn" data-year="2022">2022</button>
+                    <button class="year-btn" data-year="2021">2021</button>
+                    <button class="year-btn" data-year="2020">2020</button>
+                </div>
+
+                <div class="projects-container" id="projectsContainer">
+                    <!-- Projects will be loaded here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Project data
+        const projectsData = {
+            consultoria: [
+                {
+                    title: "Optimización de Cadena de Suministro",
+                    year: 2024,
+                    location: "Empresa Privada - Carchi",
+                    description: "Rediseño de procesos logísticos para reducir tiempos de entrega en un 30% y costos operativos en un 25%."
+                },
+                {
+                    title: "Implementación de Sistema de Gestión de Almacenes",
+                    year: 2023,
+                    location: "Distribuidora Regional - Imbabura",
+                    description: "Desarrollo e implementación de WMS para optimizar el almacenamiento y picking de productos."
+                },
+                {
+                    title: "Análisis de Rutas de Distribución",
+                    year: 2022,
+                    location: "Transportadora Nacional - Pichincha",
+                    description: "Estudio de optimización de rutas terrestres para reducir consumo de combustible y tiempos de tránsito."
+                }
+            ],
+            investigacion: [
+                {
+                    title: "Análisis de la cadena logística en la comercialización de mango desde el Ecuador hacia mercados internacionales",
+                    year: 2024,
+                    location: "Universidad Politécnica Estatal del Carchi",
+                    description: "Investigación presentada en el 7° Congreso Internacional de Ingenierías sobre logística de exportación de productos agrícolas ecuatorianos."
+                },
+                {
+                    title: "Estudio de Eficiencia en Centros de Distribución",
+                    year: 2023,
+                    location: "Centro de Investigación Logística - Carchi",
+                    description: "Análisis comparativo de indicadores de desempeño en centros de distribución regionales."
+                }
+            ],
+            cursos: [
+                {
+                    title: "Taller de Logística Internacional",
+                    year: 2024,
+                    location: "Centro de Capacitación Empresarial",
+                    description: "Capacitación avanzada en comercio exterior, documentación aduanera y regulaciones internacionales."
+                },
+                {
+                    title: "Curso de Lean Logistics",
+                    year: 2023,
+                    location: "Instituto de Logística Moderna",
+                    description: "Formación en metodologías de eliminación de desperdicios y mejora continua en procesos logísticos."
+                },
+                {
+                    title: "Certificación en Gestión de Inventarios",
+                    year: 2022,
+                    location: "Academia de Supply Chain",
+                    description: "Especialización en técnicas avanzadas de control de inventarios y pronóstico de demanda."
+                }
+            ],
+            colaboraciones: [
+                {
+                    title: "Colaboración en Proyecto de Investigación Logística",
+                    year: 2024,
+                    location: "Universidad Regional",
+                    description: "Participación como co-investigador en estudio sobre sostenibilidad en cadenas de suministro."
+                },
+                {
+                    title: "Asesoría Técnica a Startup Logística",
+                    year: 2023,
+                    location: "Aceleradora de Negocios - Quito",
+                    description: "Consultoría en diseño de modelo de negocio logístico para empresa de última milla."
+                }
+            ]
+        };
+
+        // Certificates data
+        const certificatesData = [
+            {
+                id: 1,
+                title: "Webinar sobre gestión de riesgos y manejo de armas",
+                year: 2020,
+                location: "DIENAV, Tulcán – Ecuador",
+                date: "3 de septiembre de 2020",
+                duration: "2 hours"
+            },
+            {
+                id: 2,
+                title: "Webinar sobre gestión de riesgos y defensa personal",
+                year: 2020,
+                location: "DIENAV, Tulcán – Ecuador",
+                date: "22 de octubre de 2020",
+                duration: "2 hours"
+            },
+            {
+                id: 3,
+                title: "Manejo de armas de fuego",
+                year: 2020,
+                location: "DIENAV, Tulcán – Ecuador",
+                date: "8 de diciembre de 2020",
+                duration: "8 hours"
+            },
+            {
+                id: 4,
+                title: "Seminario gestión de riesgos y administración de emergencias",
+                year: 2020,
+                location: "DIENAV, Tulcán – Ecuador",
+                date: "8 de diciembre de 2020",
+                duration: "8 hours"
+            },
+            {
+                id: 5,
+                title: "Webinar sobre defensa personal, primeros auxilios y manejo de armas",
+                year: 2020,
+                location: "DIENAV, Tulcán – Ecuador",
+                date: "11 de diciembre de 2020",
+                duration: "2 hours"
+            },
+            {
+                id: 6,
+                title: "Seminario de atención al cliente",
+                year: 2020,
+                location: "DIENAV, Tulcán – Ecuador",
+                date: "29 de diciembre de 2020",
+                duration: "8 hours"
+            },
+            {
+                id: 7,
+                title: "Defensa personal",
+                year: 2020,
+                location: "DIENAV, Tulcán – Ecuador",
+                date: "29 de diciembre de 2020",
+                duration: "8 hours"
+            },
+            {
+                id: 8,
+                title: "Gestión de riesgos y administración de emergencias",
+                year: 2020,
+                location: "DIENAV, Tulcán – Ecuador",
+                date: "29 de diciembre de 2020",
+                duration: "8 hours"
+            },
+            {
+                id: 9,
+                title: "Marketing digital",
+                year: 2023,
+                location: "Escuela Superior Politécnica de Chimborazo (ESPOCH), Quito – Ecuador",
+                date: "Marzo de 2023",
+                duration: "Mes de marzo"
+            },
+            {
+                id: 10,
+                title: "Contabilidad para emprendedores",
+                year: 2023,
+                location: "Escuela Superior Politécnica de Chimborazo (ESPOCH), Quito – Ecuador",
+                date: "16 Marzo de 2023",
+                duration: "Mes de marzo"
+            },
+            {
+                id: 11,
+                title: "Derechos humanos, democracia ciudadana, desarrollo humano, ética y valores",
+                year: 2023,
+                location: "Escuela de formación ciudadana y derechos humanos, Ibarra – Ecuador",
+                date: "5 de mayo de 2023",
+                duration: "30 hours"
+            },
+            {
+                id: 12,
+                title: "7° Congreso Internacional de Ingenierías – Expositores con póster: Análisis de la cadena logística en la comercialización de mango desde el Ecuador hacia mercados internacionales",
+                year: 2024,
+                location: "Universidad Politécnica Estatal del Carchi, Tulcán – Ecuador",
+                date: "03–04 de octubre de 2024",
+                duration: "24 hours"
+            },
+            {
+                id: 13,
+                title: "Universidad segura, libre de violencia contra las mujeres",
+                year: 2024,
+                location: "Universidad Politécnica Estatal del Carchi, Tulcán – Ecuador",
+                date: "25 de noviembre de 2024",
+                duration: "8 hours"
+            },
+            {
+                id: 14,
+                title: "Llenado de declaraciones aduaneras en el sistema Aduanero",
+                year: 2024,
+                location: "My Intelecto, Guayaquil – Ecuador",
+                date: "12–24 de noviembre de 2024",
+                duration: "10 hours"
+            },
+            {
+                id: 15,
+                title: "VIII Congreso Internacional de Ciencias Económicas y Sociales de Innovación y Cultura",
+                year: 2025,
+                location: "Universidad Politécnica Estatal del Carchi, Tulcán – Ecuador",
+                date: "29, 30 de abril y 1 de mayo de 2025",
+                duration: "24 hours"
+            }
+        ];
+
+        // Tab switching functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Load content for the selected tab
+                if (tab.dataset.tab === 'certificados') {
+                    loadCertificates(getCurrentYearFilter());
+                } else {
+                    loadProjects(tab.dataset.tab, getCurrentYearFilter());
+                }
+            });
+        });
+
+        // Year filtering functionality
+        document.querySelectorAll('.year-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all year buttons
+                document.querySelectorAll('.year-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Load content with the selected year filter
+                const currentTab = getCurrentTab();
+                if (currentTab === 'certificados') {
+                    loadCertificates(btn.dataset.year);
+                } else {
+                    loadProjects(currentTab, btn.dataset.year);
+                }
+            });
+        });
+
+        // Helper functions
+        function getCurrentTab() {
+            return document.querySelector('.tab.active').dataset.tab;
+        }
+
+        function getCurrentYearFilter() {
+            return document.querySelector('.year-btn.active').dataset.year;
+        }
+
+        // Load projects based on category and year filter
+        function loadProjects(category, yearFilter) {
+            const container = document.getElementById('projectsContainer');
+            const projects = projectsData[category] || [];
+            
+            // Filter projects by year if not "all"
+            const filteredProjects = yearFilter === 'all' 
+                ? projects 
+                : projects.filter(project => project.year.toString() === yearFilter);
+            
+            // Generate HTML for projects
+            if (filteredProjects.length === 0) {
+                container.innerHTML = '<div class="no-projects" style="grid-column: 1/-1; text-align: center; padding: 40px; color: #666;">No hay proyectos disponibles para esta categoría y año.</div>';
+                return;
+            }
+            
+            container.innerHTML = filteredProjects.map(project => `
+                <div class="project-card">
+                    <h4>${project.title}</h4>
+                    <div class="project-year">${project.year}</div>
+                    <div class="project-location">${project.location}</div>
+                    <div class="project-description">${project.description}</div>
+                </div>
+            `).join('');
+        }
+
+        // Load certificates based on year filter
+        function loadCertificates(yearFilter) {
+            const container = document.getElementById('projectsContainer');
+            
+            // Filter certificates by year if not "all"
+            const filteredCertificates = yearFilter === 'all' 
+                ? certificatesData 
+                : certificatesData.filter(cert => cert.year.toString() === yearFilter);
+            
+            // Generate HTML for certificates
+            if (filteredCertificates.length === 0) {
+                container.innerHTML = '<div class="no-projects" style="grid-column: 1/-1; text-align: center; padding: 40px; color: #666;">No hay certificados disponibles para este año.</div>';
+                return;
+            }
+            
+            container.innerHTML = filteredCertificates.map(cert => `
+                <div class="certificate-item">
+                    <div class="certificate-year">${cert.year}</div>
+                    [${cert.id}]. ${cert.title}. Duration: ${cert.duration}. ${cert.location}. ${cert.date}. 
+                    <a href="https://drive.google.com/drive/folders/1d-RMn2VNxpaFA2FEpqvUzfJWHP1q7f2x?usp=sharing" target="_blank">Click aquí para verlos</a>
+                </div>
+            `).join('');
+        }
+
+        // Initialize with first tab and all years
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProjects('consultoria', 'all');
+        });
+    </script>
+</body>
+</html>

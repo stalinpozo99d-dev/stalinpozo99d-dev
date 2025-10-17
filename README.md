@@ -33,7 +33,22 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
-.profile-img { width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 20px; border: 4px solid rgba(255,255,255,0.3); object-fit: cover; }
+.profile-container {
+  width: 150px;         
+  height: 150px;
+  border-radius: 50%;    
+  border: 4px solid rgba(255,255,255,0.3);
+  overflow: hidden;     
+  margin: 0 auto 20px;
+}
+
+.profile-photo {
+  width: 100%;         
+  height: 100%;
+  object-fit: cover;     
+  display: block;
+}
+
 
         .name {
             text-align: center;

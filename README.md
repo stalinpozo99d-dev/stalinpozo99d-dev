@@ -33,20 +33,12 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
-.profile-container {
-  width: 150px;         
-  height: 150px;
-  border-radius: 50%;    
-  border: 4px solid rgba(255,255,255,0.3);
-  overflow: hidden;     
-  margin: 0 auto 20px;
-}
-
+<img src="Perfil.jpg" alt="Mi foto" class="profile-photo">
 .profile-photo {
-  width: 100%;         
-  height: 100%;
-  object-fit: cover;     
-  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 
